@@ -1,5 +1,6 @@
+
 # DispNet Draft Notes
-## Disparity Estimation Network Architecture|
+## Disparity Estimation Network Architecture
 
 Here is an attempt to recreate the DispNet training environment on google cloud without the use of docker.  However using docker is the quickest way to try out inference on different networks.
 
@@ -46,6 +47,7 @@ Dataset used by dispnet is very large.  It took over 40 minutes for me to downlo
 - Ubuntu 16.04 LTS
 - Cuda 8.0
 - CuDnn 5.1
+- Caffe version 1.0.0-rc3
 
 ### Virtual Environment
 - Using google cloud console, spin a VM instance with ubuntu-16.04-lts images and 1 Nvidia K80 GPU
@@ -118,8 +120,8 @@ apt-get update && \
 ### Change demo.py
 
 ```
-def dockerize_filepath(path):                                                 
-    return os.path.join('./', path)  # /input-output --> ./
+def dockerize_filepath(path):
+    return os.path.join('./', path) # /input-output --> ./
 ```
 
 ## Inference
@@ -142,4 +144,4 @@ def dockerize_filepath(path):
 
 
 
-
+!jupyter nbconvert DispNet.ipynb --to README.md
