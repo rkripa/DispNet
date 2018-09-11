@@ -118,7 +118,8 @@ apt-get update && \
 ### Change demo.py
 
 ```
-def dockerize_filepath(path):                                                 return os.path.join('./', path)  # /input-output --> ./
+def dockerize_filepath(path):                                                 
+    return os.path.join('./', path)  # /input-output --> ./
 ```
 
 ## Inference
