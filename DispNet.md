@@ -1,3 +1,4 @@
+
 # DispNet Draft Notes
 ## Disparity Estimation Network Architecture|
 
